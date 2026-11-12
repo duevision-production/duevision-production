@@ -1,0 +1,434 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="اتصل بفريق DUEVISION PRODUCTION">
+
+  <title>اتصل بنا | DUEVISION PRODUCTION</title>
+
+<link rel="stylesheet" href="style.css">
+  <style>
+
+    /* CONTACT PAGE */
+
+    .contact-section {
+      max-width: 850px;
+      margin: 60px auto;
+      padding: 40px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 5px 30px rgba(0,0,0,0.08);
+    }
+
+    .contact-section h2 {
+      text-align: center;
+      margin-bottom: 15px;
+      color: #222;
+    }
+
+    .contact-intro {
+      text-align: center;
+      color: #777;
+      margin-bottom: 35px;
+      line-height: 1.9;
+    }
+
+    .contact-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    .form-group label {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 15px;
+      outline: none;
+      box-sizing: border-box;
+      background: #fafafa;
+      transition: 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: #c59b52;
+      background: #fff;
+    }
+
+    .form-group textarea {
+      min-height: 160px;
+      resize: vertical;
+    }
+
+    .submit-btn {
+      grid-column: 1 / -1;
+      padding: 16px;
+      border: none;
+      border-radius: 8px;
+      background: #c59b52;
+      color: #fff;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .submit-btn:hover {
+      background: #a77d37;
+      transform: translateY(-2px);
+    }
+
+    .contact-info {
+      text-align: center;
+      margin-top: 35px;
+      padding-top: 25px;
+      border-top: 1px solid #eee;
+      line-height: 2;
+    }
+
+    .contact-info a {
+      color: #b58a42;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .contact-socials {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .contact-socials a {
+      display: inline-block;
+      margin: 8px;
+      padding: 10px 15px;
+      color: #fff;
+      background: #222;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .contact-socials a:hover {
+      background: #c59b52;
+    }
+
+    @media (max-width: 600px) {
+
+      .contact-section {
+        margin: 25px 12px;
+        padding: 22px;
+      }
+
+      .contact-form {
+        grid-template-columns: 1fr;
+      }
+
+      .form-group.full,
+      .submit-btn {
+        grid-column: 1;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header class="topbar">
+
+    <a class="brand" href="index.html">
+
+      <span class="brand-mark">DV</span>
+
+      <span class="brand-copy">
+        <strong>DUEVISION</strong>
+        <small>PRODUCTION</small>
+      </span>
+
+    </a>
+
+    <nav class="nav" id="mainNav">
+
+      <a href="index.html">الرئيسية</a>
+
+      <a href="bio.html">السيرة الذاتية</a>
+
+      <a href="news.html">آخر الأخبار</a>
+
+      <a href="videos.html">فيديوهات</a>
+
+      <a href="contact.html">اتصل بنا</a>
+
+    </nav>
+
+    <button class="menu-toggle"
+            id="menuToggle"
+            aria-label="فتح القائمة">
+      ☰
+    </button>
+
+  </header>
+
+
+  <!-- CONTACT FORM -->
+
+  <main class="container">
+
+    <section class="contact-section">
+
+      <h2 class="section-title">اتصل بنا</h2>
+
+      <p class="contact-intro">
+
+        مرحباً بكم في DUEVISION PRODUCTION.
+
+        يسعدنا استقبال رسائلكم واستفساراتكم
+        ومقترحاتكم حول الإعلام والسينما والثقافة والفن.
+
+      </p>
+
+
+      <!-- FORM SUBMIT -->
+
+      <form class="contact-form"
+            action="https://formsubmit.co/duevisioniproduction@gmail.com"
+            method="POST">
+
+        <!-- EMAIL SETTINGS -->
+
+        <input type="hidden"
+               name="_subject"
+               value="رسالة جديدة من موقع DUEVISION PRODUCTION">
+
+        <input type="hidden"
+               name="_captcha"
+               value="true">
+
+        <input type="hidden"
+               name="_template"
+               value="table">
+
+
+        <!-- NAME -->
+
+        <div class="form-group">
+
+          <label for="name">الاسم واللقب *</label>
+
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="أدخل اسمك الكامل"
+            required>
+
+        </div>
+
+
+        <!-- EMAIL -->
+
+        <div class="form-group">
+
+          <label for="email">البريد الإلكتروني *</label>
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="example@email.com"
+            required>
+
+        </div>
+
+
+        <!-- PHONE -->
+
+        <div class="form-group">
+
+          <label for="phone">رقم الهاتف</label>
+
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="أدخل رقم هاتفك">
+
+        </div>
+
+
+        <!-- SUBJECT -->
+
+        <div class="form-group">
+
+          <label for="subject">موضوع الرسالة *</label>
+
+          <select id="subject" name="subject" required>
+
+            <option value="">اختر الموضوع</option>
+
+            <option value="الإعلام والصحافة">
+              الإعلام والصحافة
+            </option>
+
+            <option value="الإنتاج السينمائي">
+              الإنتاج السينمائي
+            </option>
+
+            <option value="الشراكة والتعاون">
+              الشراكة والتعاون
+            </option>
+
+            <option value="الإعلانات">
+              الإعلانات
+            </option>
+
+            <option value="التغطية الإعلامية">
+              التغطية الإعلامية
+            </option>
+
+            <option value="موضوع آخر">
+              موضوع آخر
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <!-- MESSAGE -->
+
+        <div class="form-group full">
+
+          <label for="message">الرسالة *</label>
+
+          <textarea
+            id="message"
+            name="message"
+            placeholder="اكتب رسالتك هنا..."
+            required></textarea>
+
+        </div>
+
+
+        <!-- SUBMIT -->
+
+        <button type="submit" class="submit-btn">
+
+          إرسال الرسالة ✉
+
+        </button>
+
+      </form>
+
+
+      <!-- CONTACT INFORMATION -->
+
+      <div class="contact-info">
+
+        <h3>DUEVISION PRODUCTION</h3>
+
+        <p>
+          البريد الإلكتروني:
+          <a href="mailto:duevisioniproduction@gmail.com">
+            duevisioniproduction@gmail.com
+          </a>
+        </p>
+
+        <p>DUE MENTI, UNA VISIONE.</p>
+
+        <p>YASSINE &amp; MALEK</p>
+
+      </div>
+
+
+      <!-- SOCIAL MEDIA -->
+
+      <div class="contact-socials">
+
+        <p>تابعونا على مواقع التواصل الاجتماعي</p>
+
+        <a href="#" target="_blank">Facebook</a>
+
+        <a href="#" target="_blank">Instagram</a>
+
+        <a href="#" target="_blank">YouTube</a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer class="footer">
+
+    <strong>DUEVISION PRODUCTION</strong>
+
+    <p>DUE MENTI, UNA VISIONE.</p>
+
+    <p>YASSINE &amp; MALEK</p>
+
+    <p>
+      © 2026 DUEVISION PRODUCTION
+      - جميع الحقوق محفوظة
+    </p>
+
+  </footer>
+
+
+  <!-- JAVASCRIPT -->
+
+  <script>
+
+    const menuToggle =
+      document.getElementById('menuToggle');
+
+    const mainNav =
+      document.getElementById('mainNav');
+
+    menuToggle.addEventListener('click', () => {
+      mainNav.classList.toggle('open');
+    });
+
+    mainNav.querySelectorAll('a').forEach(link => {
+
+      link.addEventListener('click', () => {
+        mainNav.classList.remove('open');
+      });
+
+    });
+
+  </script>
+
+</body>
+</html>

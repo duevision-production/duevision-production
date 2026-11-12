@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DUEVISION PRODUCTION</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="Sans titre.png">
+</head>
+<body>
+  
+</body>
+</html>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <span class="brand-mark">DV</span>
+    <span class="brand-copy">
+      <strong>DUEVISION</strong>
+      <small>PRODUCTION</small>
+    </span>
+  </a>
+  <nav class="nav" id="mainNav">
+    <a href="index.html">الرئيسية</a>
+    <a href="bio.html">السيرة الذاتية</a>
+    <a href="news.html">آخر الأخبار</a>
+    <a href="videos.html">فيديوهات</a>
+    <a href="contact.html">اتصل بنا</a>
+  </nav>
+  <button class="menu-toggle" id="menuToggle">☰</button>
+</header>
+
+
+<!-- HERO PRINCIPAL -->
+<section class="hero" id="home">
+
+  <img
+    src="duevision-logo.png.png"
+    alt="DUEVISION PRODUCTION"
+    class="hero-logo-image"
+  >
+
+</section>
+
+<!-- WELCOME -->
+<section class="welcome-section">
+
+  <div class="welcome-content">
+
+    <span class="welcome-label">BIENVENUE CHEZ DUEVISION</span>
+
+    <h2>مرحباً بكم في DUEVISION</h2>
+
+    <div class="gold-line"></div>
+
+    <p>
+      منصة للإعلام والسينما والثقافة والفن.
+      نؤمن بالإبداع، بالصورة، وبقوة الحكاية.
+    </p>
+
+    <div class="welcome-buttons">
+
+      <a href="bio.html">اكتشف السيرة الذاتية</a>
+
+      <a href="news.html">اكتشف آخر الأخبار</a>
+
+      <a href="videos.html">شاهد الفيديوهات</a>
+
+      <a href="contact.html">تواصل معنا</a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- NEWS IFRAME -->
+<section class="news-frame-section" id="news">
+
+    <div class="news-frame-heading">
+        <span>DUEVISION JOURNAL</span>
+        <h2>آخر الأخبار</h2>
+        <div class="gold-line"></div>
+        <p>تابعوا آخر أخبار السينما والثقافة والفن والإعلام</p>
+    </div>
+
+    <iframe
+        src="news.html"
+        class="news-iframe"
+        title="آخر أخبار DUEVISION"
+        loading="lazy">
+    </iframe>
+
+</section>
+
+
+<footer class="footer">
+  <strong>DUEVISION PRODUCTION</strong>
+  <p>DUE MENTI, UNA VISIONE.</p>
+  <p>YASSINE &amp; MALEK</p>
+  <p>© 2026 DUEVISION PRODUCTION</p>
+</footer>
+
+<script>
+const menuToggle = document.getElementById('menuToggle');
+const mainNav = document.getElementById('mainNav');
+
+menuToggle.addEventListener('click', () => {
+  mainNav.classList.toggle('open');
+});
+</script>
+
+</body>
+</html>
