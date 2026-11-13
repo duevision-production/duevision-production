@@ -1,40 +1,52 @@
 
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="فيديوهات وتقارير DUEVISION PRODUCTION">
+  <meta name="description" content="فيديوهات وتقارير وبودكاست DUEVISION PRODUCTION">
 
   <title>الفيديوهات | DUEVISION PRODUCTION</title>
 
   <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
+<!-- HEADER -->
+
 <header class="topbar">
 
   <a class="brand" href="index.html">
+
     <span class="brand-mark">DV</span>
+
     <span class="brand-copy">
       <strong>DUEVISION</strong>
       <small>PRODUCTION</small>
     </span>
+
   </a>
 
   <nav class="nav" id="mainNav">
+
     <a href="index.html">الرئيسية</a>
     <a href="bio.html">السيرة الذاتية</a>
     <a href="news.html">آخر الأخبار</a>
     <a href="videos.html" class="active">فيديوهات</a>
     <a href="contact.html">اتصل بنا</a>
+
   </nav>
 
   <button class="menu-toggle" id="menuToggle">☰</button>
 
 </header>
+
+
+<!-- VIDEOS SECTION -->
 
 <main class="container">
 
@@ -44,13 +56,20 @@
 
     <article class="news-card">
 
+      <!-- VIDEO 9:16 -->
+
       <div class="video-wrapper">
-  <iframe
-    src="https://www.facebook.com/reel/1485269767993760"
-    allowfullscreen="true"
-    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-  </iframe>
-</div>
+
+        <iframe
+          src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1485269767993760&show_text=false"
+          allowfullscreen="true"
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+          loading="lazy">
+        </iframe>
+
+      </div>
+
+      <!-- VIDEO DETAILS -->
 
       <div class="news-content">
 
@@ -75,6 +94,14 @@
 
         <p>تابعونا وشاركونا آراءكم ❤️</p>
 
+        <a
+          class="read-more"
+          href="https://www.facebook.com/reel/1485269767993760"
+          target="_blank"
+          rel="noopener noreferrer">
+          مشاهدة الفيديو على Facebook ←
+        </a>
+
       </div>
 
     </article>
@@ -82,6 +109,9 @@
   </div>
 
 </main>
+
+
+<!-- FOOTER -->
 
 <footer class="footer">
 
@@ -93,10 +123,15 @@
 
 </footer>
 
+
+<!-- MOBILE MENU -->
+
 <script>
 
-document.getElementById('menuToggle').addEventListener('click', () => {
+document.getElementById('menuToggle').addEventListener('click', function() {
+
   document.getElementById('mainNav').classList.toggle('open');
+
 });
 
 </script>
