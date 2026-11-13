@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="شاركنا رأيك في DUEVISION PRODUCTION">
+<title>آراؤكم تهمنا | DUEVISION PRODUCTION</title>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:Arial,sans-serif;
+  background:#101010;color:#fff;
+  min-height:100vh;line-height:1.7
+}
+header{
+  padding:22px 7%;border-bottom:1px solid #333;
+  display:flex;justify-content:space-between;
+  align-items:center;gap:15px;flex-wrap:wrap
+}
+.logo{color:#d6ad55;font-size:23px;font-weight:bold}
+header a{color:#ddd;text-decoration:none}
+main{max-width:850px;margin:55px auto;padding:20px}
+.intro{text-align:center;margin-bottom:35px}
+.intro h1{color:#d6ad55;font-size:32px;margin-bottom:10px}
+.intro p{color:#bbb}
+.panel{
+  background:#1a1a1a;border:1px solid #383838;
+  border-radius:15px;padding:30px;margin-bottom:35px
+}
+label{display:block;margin:15px 0 7px;color:#e6c77e}
+input,textarea{
+  width:100%;padding:13px;border-radius:8px;
+  border:1px solid #444;background:#111;
+  color:white;font-size:16px;outline:none
+}
+input:focus,textarea:focus{border-color:#d6ad55}
+textarea{min-height:130px;resize:vertical}
+.stars{display:flex;gap:8px;direction:ltr;margin:8px 0}
+.stars input{display:none}
+.stars label{
+  font-size:34px;color:#555;cursor:pointer;margin:0
+}
+.stars label.active{color:#e5b94e}
+button{
+  border:0;border-radius:8px;padding:13px 25px;
+  background:#d6ad55;color:#111;font-weight:bold;
+  font-size:16px;cursor:pointer
+}
+button:disabled{opacity:.6;cursor:wait}
+.submit{width:100%;margin-top:22px}
+#message{text-align:center;margin-top:18px;color:#e6c77e}
+.section-title{
+  color:#d6ad55;text-align:center;
+  font-size:25px;margin:35px 0 20px
+}
+.review{
+  background:#1a1a1a;border:1px solid #333;
+  border-radius:12px;padding:20px;margin-bottom:15px
+}
+.review h3{color:#e6c77e}
+.review .rating{color:#e5b94e}
+.review p{margin:10px 0;color:#ddd;white-space:pre-wrap;overflow-wrap:anywhere}
+.review small{color:#888}
+.empty{text-align:center;color:#999;padding:25px}
+footer{text-align:center;padding:25px;color:#888;border-top:1px solid #333}
+@media(max-width:600px){
+  main{margin:25px auto;padding:15px}
+  .panel{padding:20px}
+  .intro h1{font-size:26px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">DUEVISION PRODUCTION</div>
+  <a href="index.html">العودة إلى الرئيسية ←</a>
+</header>
+
+<main>
+  <section class="intro">
+    <h1>آراؤكم تهمّنا</h1>
+    <p>نحن نهتم بتجربتكم، شاركونا آراءكم واقتراحاتكم لتطوير أعمالنا.</p>
+  </section>
+
+  <section class="panel">
+    <form id="feedbackForm">
+      <label for="name">الاسم *</label>
+      <input id="name" type="text" minlength="2" maxlength="60"
+        placeholder="اكتب اسمك" required>
+
+      <label for="email">البريد الإلكتروني (اختياري)</label>
+      <input id="email" type="email" placeholder="example@email.com">
+
+      <label>قيّم تجربتك *</label>
+      <div class="stars" id="stars">
+        <input type="radio" name="rating" value="1" id="s1">
+        <label for="s1">★</label>
+        <input type="radio" name="rating" value="2" id="s2">
+        <label for="s2">★</label>
+        <input type="radio" name="rating" value="3" id="s3">
+        <label for="s3">★</label>
+        <input type="radio" name="rating" value="4" id="s4">
+        <label for="s4">★</label>
+        <input type="radio" name="rating" value="5" id="s5">
+        <label for="s5">★</label>
+      </div>
+
+      <label for="comment">رأيك أو اقتراحك *</label>
+      <textarea id="comment" minlength="3" maxlength="1000"
+        placeholder="اكتب رأيك هنا..." required></textarea>
+
+      <button class="submit" id="submitBtn" type="submit">
+        إرسال الرأي
+      </button>
+
+      <div id="message" role="status"></div>
+    </form>
+  </section>
+
+  <h2 class="section-title">آراء زوارنا</h2>
+  <div id="reviews">
+    <p class="empty">جاري تحميل الآراء...</p>
+  </div>
+</main>
+
+<footer>
+  © 2026 DUEVISION PRODUCTION — جميع الحقوق محفوظة
+</footer>
+
+<script>
+const SUPABASE_URL = "https://hfhresvuztpwfejrdayw.supabase.co";
+const SUPABASE_KEY = "sb_publishable_-R_6fIJA_25oK4Zn4S99cg_IqIUqatH";
+
+const db = window.supabase.createClient(
+  SUPABASE_URL, SUPABASE_KEY
+);
+
+const form = document.getElementById("feedbackForm");
+const message = document.getElementById("message");
+const submitBtn = document.getElementById("submitBtn");
+const reviews = document.getElementById("reviews");
+
+// تقييم النجوم
+document.querySelectorAll('input[name="rating"]').forEach(input => {
+  input.addEventListener("change", () => {
+    const selected = Number(input.value);
+    document.querySelectorAll(".stars label").forEach((label, i) => {
+      label.classList.toggle("active", i < selected);
+    });
+  });
+});
+
+// حماية النصوص عند عرض التعليقات
+function safe(value) {
+  return String(value ?? "").replace(/[&<>"']/g, char => ({
+    "&":"&amp;","<":"&lt;",">":"&gt;",
+    '"':"&quot;","'":"&#039;"
+  })[char]);
+}
+
+// عرض الآراء المقبولة فقط
+async function loadReviews() {
+  reviews.innerHTML = '<p class="empty">جاري تحميل الآراء...</p>';
+
+  const {data, error} = await db
+    .from("feedback")
+    .select("name,rating,comment,created_at")
+    .eq("status", "approved")
+    .order("created_at", {ascending:false})
+    .limit(50);
+
+  if(error) {
+    reviews.textContent = "تعذر تحميل الآراء حالياً.";
+    return;
+  }
+
+  if(!data.length) {
+    reviews.innerHTML =
+      '<p class="empty">كونوا أول من يشاركنا رأيه ❤️</p>';
+    return;
+  }
+
+  reviews.innerHTML = data.map(item => `
+    <article class="review">
+      <h3>${safe(item.name)}</h3>
+      <div class="rating">${"★".repeat(item.rating)}${"☆".repeat(5-item.rating)}</div>
+      <p>${safe(item.comment)}</p>
+      <small>${new Date(item.created_at).toLocaleDateString("ar-TN")}</small>
+    </article>
+  `).join("");
+}
+
+// إرسال التعليق
+form.addEventListener("submit", async e => {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const comment = document.getElementById("comment").value.trim();
+  const rating = Number(
+    document.querySelector('input[name="rating"]:checked')?.value
+  );
+
+  if(!rating) {
+    message.textContent = "يرجى اختيار عدد النجوم.";
+    return;
+  }
+
+  if(name.length < 2 || comment.length < 3) {
+    message.textContent = "يرجى إدخال معلومات صحيحة.";
+    return;
+  }
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = "جاري الإرسال...";
+  message.textContent = "";
+
+  const {error} = await db.from("feedback").insert([{
+    name, email: email || null, rating, comment
+  }]);
+
+  submitBtn.disabled = false;
+  submitBtn.textContent = "إرسال الرأي";
+
+  if(error) {
+    message.textContent = "تعذر إرسال رأيك. حاول مرة أخرى.";
+    return;
+  }
+
+  form.reset();
+  document.querySelectorAll(".stars label").forEach(label => {
+    label.classList.remove("active");
+  });
+
+  message.textContent =
+    "شكراً على مشاركتك! ❤️ رأيك في انتظار المراجعة قبل النشر.";
+
+});
+
+loadReviews();
+</script>
+
+</body>
+</html>
