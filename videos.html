@@ -3,21 +3,21 @@
 <html lang="ar" dir="rtl">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="فيديوهات وتقارير وبودكاست رؤيا RO'YA من إنتاج DUEVISION PRODUCTION">
+<meta name="description" content="فيديوهات وتقارير وبودكاست رؤيا RO'YA - DUEVISION PRODUCTION">
 
-  <title>الفيديوهات | DUEVISION PRODUCTION</title>
+<title>الفيديوهات | DUEVISION PRODUCTION</title>
 
-  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 
-  <style>
+<style>
 
 /* VIDEO PAGE */
 
-.video-page-intro {
-  background: linear-gradient(135deg, #080808, #252525);
+.video-intro {
+  background: linear-gradient(135deg,#080808,#29231a);
   color: white;
   text-align: center;
   padding: 45px 20px;
@@ -26,24 +26,24 @@
   border-bottom: 3px solid #c9a45c;
 }
 
-.video-page-intro h2 {
+.video-intro h2 {
   color: #c9a45c;
   font-size: 30px;
   margin-bottom: 15px;
 }
 
-.video-page-intro p {
+.video-intro p {
   line-height: 2;
   color: #ddd;
 }
 
-.video-page-intro strong {
+.video-intro strong {
   color: #c9a45c;
 }
 
 .news-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit,minmax(270px,1fr));
   gap: 28px;
   align-items: start;
 }
@@ -52,31 +52,71 @@
   background: #fff;
   border-radius: 14px;
   overflow: hidden;
-  border: 1px solid #e8e8e8;
-  box-shadow: 0 5px 20px rgba(0,0,0,.06);
-  transition: .3s ease;
+  box-shadow: 0 5px 20px rgba(0,0,0,.08);
+  transition: .3s;
 }
 
 .news-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0,0,0,.13);
+  box-shadow: 0 12px 30px rgba(0,0,0,.15);
 }
 
-.video-wrapper {
+/* VIDEO COVER */
+
+.video-cover {
+  position: relative;
   width: 100%;
-  max-width: 380px;
   aspect-ratio: 9 / 16;
+  max-width: 380px;
   margin: auto;
+  background: linear-gradient(145deg,#080808,#393020);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
-  background: #000;
 }
 
-.video-wrapper iframe {
+.video-cover a {
   width: 100%;
   height: 100%;
-  border: 0;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  gap: 20px;
 }
+
+.play-button {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #c9a45c;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c9a45c;
+  font-size: 30px;
+  transition: .3s;
+}
+
+.video-cover a:hover .play-button {
+  background: #c9a45c;
+  color: #000;
+  transform: scale(1.1);
+}
+
+.video-cover h3 {
+  color: #c9a45c;
+  font-size: 22px;
+}
+
+.video-cover p {
+  color: #ddd;
+}
+
+/* CONTENT */
 
 .news-content {
   padding: 22px;
@@ -84,8 +124,8 @@
 
 .category {
   display: inline-block;
-  color: #9b7838;
   background: #f8f1e4;
+  color: #997538;
   padding: 6px 12px;
   border-radius: 30px;
   font-size: 13px;
@@ -93,10 +133,10 @@
 }
 
 .news-content h3 {
-  color: #171717;
   font-size: 18px;
   line-height: 1.9;
   margin: 15px 0;
+  color: #171717;
 }
 
 .news-content p {
@@ -111,8 +151,8 @@
   padding: 11px 18px;
   background: #101010;
   color: white;
-  border-radius: 6px;
   text-decoration: none;
+  border-radius: 6px;
   transition: .3s;
 }
 
@@ -121,12 +161,9 @@
   color: #000;
 }
 
-@media (max-width: 600px) {
-  .video-page-intro {
-    padding: 30px 15px;
-  }
+@media(max-width:600px) {
 
-  .video-page-intro h2 {
+  .video-intro h2 {
     font-size: 23px;
   }
 
@@ -134,13 +171,13 @@
     grid-template-columns: 1fr;
   }
 
-  .video-wrapper {
+  .video-cover {
     max-width: 100%;
   }
+
 }
 
-  </style>
-
+</style>
 </head>
 
 <body>
@@ -149,26 +186,30 @@
 
 <header class="topbar">
 
-  <a class="brand" href="index.html">
-    <span class="brand-mark">DV</span>
+<a class="brand" href="index.html">
 
-    <span class="brand-copy">
-      <strong>DUEVISION</strong>
-      <small>PRODUCTION</small>
-    </span>
-  </a>
+<span class="brand-mark">DV</span>
 
-  <nav class="nav" id="mainNav">
-    <a href="index.html">الرئيسية</a>
-    <a href="bio.html">السيرة الذاتية</a>
-    <a href="news.html">آخر الأخبار</a>
-    <a href="videos.html" class="active">فيديوهات</a>
-    <a href="contact.html">اتصل بنا</a>
-  </nav>
+<span class="brand-copy">
+<strong>DUEVISION</strong>
+<small>PRODUCTION</small>
+</span>
 
-  <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة">
-    ☰
-  </button>
+</a>
+
+<nav class="nav" id="mainNav">
+
+<a href="index.html">الرئيسية</a>
+<a href="bio.html">السيرة الذاتية</a>
+<a href="news.html">آخر الأخبار</a>
+<a href="videos.html" class="active">فيديوهات</a>
+<a href="contact.html">اتصل بنا</a>
+
+</nav>
+
+<button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة">
+☰
+</button>
 
 </header>
 
@@ -177,183 +218,188 @@
 
 <main class="container">
 
-  <h2 class="section-title">فيديوهات وتقارير</h2>
+<h2 class="section-title">فيديوهات وتقارير</h2>
 
 
-  <!-- PODCAST INTRO -->
+<!-- PODCAST INTRO -->
 
-  <section class="video-page-intro">
+<section class="video-intro">
 
-    <h2>🎙️ بودكاست رؤيا | RO’YA</h2>
+<h2>🎙️ بودكاست رؤيا | RO’YA</h2>
 
-    <p>
-      مساحة للحوار، الثقافة، الأفكار واكتشاف وجهات نظر مختلفة.
-    </p>
+<p>
+مساحة للحوار، الثقافة، الأفكار واكتشاف وجهات نظر مختلفة.
+</p>
 
-    <p>
-      رحلة إعلامية تجمع بين النقاش والإبداع والتعبير.
-    </p>
+<p>
+رحلة إعلامية تجمع بين النقاش والإبداع والتعبير.
+</p>
 
-    <p>
-      <strong>A DUEVISION PRODUCTION</strong>
-    </p>
+<p>
+<strong>A DUEVISION PRODUCTION</strong>
+</p>
 
-  </section>
-
-
-  <!-- VIDEOS -->
-
-  <div class="news-grid">
+</section>
 
 
-    <!-- PARTIE 3 -->
+<!-- VIDEO GRID -->
 
-    <article class="news-card">
-
-      <div class="video-wrapper">
-
-        <iframe
-          src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1487754806549302%2F&show_text=false"
-          title="RO'YA Partie 3"
-          loading="lazy"
-          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
-
-      </div>
-
-      <div class="news-content">
-
-        <span class="category">بودكاست | Partie 3</span>
-
-        <h3>🎙️ بودكاست رؤيا | RO’YA – الحلقة الأولى – Partie 3</h3>
-
-        <p>
-          نواصلوا معاكم رحلة الحوار والنقاش،
-          ونكتشفوا أفكار ووجهات نظر مختلفة. ✨
-        </p>
-
-        <p>
-          <strong>مع:</strong><br>
-          Najet Chaabani<br>
-          Malek Belaid
-        </p>
-
-        <p>🎬 إخراج: Yassine Methni</p>
-
-        <p>بدعم من دار الشباب المروج.</p>
-
-        <a class="read-more"
-           href="https://www.facebook.com/reel/1487754806549302"
-           target="_blank"
-           rel="noopener noreferrer">
-          مشاهدة الفيديو على Facebook ←
-        </a>
-
-      </div>
-
-    </article>
+<div class="news-grid">
 
 
-    <!-- PARTIE 2 -->
+<!-- PARTIE 3 -->
 
-    <article class="news-card">
+<article class="news-card">
 
-      <div class="video-wrapper">
+<div class="video-cover">
 
-        <iframe
-          src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F2270328370491068%2F&show_text=false"
-          title="RO'YA Partie 2"
-          loading="lazy"
-          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
+<a href="https://www.facebook.com/reel/1487754806549302"
+target="_blank" rel="noopener noreferrer">
 
-      </div>
+<span class="play-button">▶</span>
 
-      <div class="news-content">
+<h3>RO’YA</h3>
 
-        <span class="category">بودكاست | Partie 2</span>
+<p>PARTIE 03</p>
 
-        <h3>🎙️ بودكاست رؤيا | RO’YA – الحلقة الأولى – Partie 2</h3>
+</a>
 
-        <p>
-          نفتحوا معاكم نافذة جديدة للنقاش، الأفكار
-          وتبادل وجهات النظر. ✨
-        </p>
+</div>
 
-        <p>
-          <strong>مع:</strong><br>
-          Najet Chaabani<br>
-          Malek Belaid
-        </p>
+<div class="news-content">
 
-        <p>🎬 إخراج: Yassine Methni</p>
+<span class="category">بودكاست | Partie 3</span>
 
-        <p>بدعم من دار الشباب المروج.</p>
+<h3>🎙️ بودكاست رؤيا | RO’YA – الحلقة الأولى – Partie 3</h3>
 
-        <a class="read-more"
-           href="https://www.facebook.com/reel/2270328370491068"
-           target="_blank"
-           rel="noopener noreferrer">
-          مشاهدة الفيديو على Facebook ←
-        </a>
+<p>
+نواصلوا معاكم رحلة الحوار والنقاش،
+ونكتشفوا أفكار ووجهات نظر مختلفة. ✨
+</p>
 
-      </div>
+<p>
+<strong>مع:</strong><br>
+Najet Chaabani<br>
+Malek Belaid
+</p>
 
-    </article>
+<p>🎬 إخراج: Yassine Methni</p>
 
+<p>بدعم من دار الشباب المروج.</p>
 
-    <!-- PARTIE 1 -->
+<a class="read-more"
+href="https://www.facebook.com/reel/1487754806549302"
+target="_blank" rel="noopener noreferrer">
+▶ مشاهدة الفيديو على Facebook
+</a>
 
-    <article class="news-card">
+</div>
 
-      <div class="video-wrapper">
-
-        <iframe
-          src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1485269767993760%2F&show_text=false"
-          title="RO'YA Partie 1"
-          loading="lazy"
-          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
-
-      </div>
-
-      <div class="news-content">
-
-        <span class="category">بودكاست | Partie 1</span>
-
-        <h3>🎙️ بودكاست رؤيا | RO’YA – الحلقة الأولى – Partie 1</h3>
-
-        <p>
-          بداية حكاية، وأول رحلة في عالم الأفكار،
-          الحوار واكتشاف وجهات نظر مختلفة. ✨
-        </p>
-
-        <p>
-          <strong>مع:</strong><br>
-          Najet Chaabani<br>
-          Malek Belaid
-        </p>
-
-        <p>🎬 إخراج: Yassine Methni</p>
-
-        <p>بدعم من دار الشباب المروج.</p>
-
-        <a class="read-more"
-           href="https://www.facebook.com/reel/1485269767993760"
-           target="_blank"
-           rel="noopener noreferrer">
-          مشاهدة الفيديو على Facebook ←
-        </a>
-
-      </div>
-
-    </article>
+</article>
 
 
-  </div>
+<!-- PARTIE 2 -->
+
+<article class="news-card">
+
+<div class="video-cover">
+
+<a href="https://www.facebook.com/reel/2270328370491068"
+target="_blank" rel="noopener noreferrer">
+
+<span class="play-button">▶</span>
+
+<h3>RO’YA</h3>
+
+<p>PARTIE 02</p>
+
+</a>
+
+</div>
+
+<div class="news-content">
+
+<span class="category">بودكاست | Partie 2</span>
+
+<h3>🎙️ بودكاست رؤيا | RO’YA – الحلقة الأولى – Partie 2</h3>
+
+<p>
+نفتحوا معاكم نافذة جديدة للنقاش، الأفكار
+وتبادل وجهات النظر. ✨
+</p>
+
+<p>
+<strong>مع:</strong><br>
+Najet Chaabani<br>
+Malek Belaid
+</p>
+
+<p>🎬 إخراج: Yassine Methni</p>
+
+<p>بدعم من دار الشباب المروج.</p>
+
+<a class="read-more"
+href="https://www.facebook.com/reel/2270328370491068"
+target="_blank" rel="noopener noreferrer">
+▶ مشاهدة الفيديو على Facebook
+</a>
+
+</div>
+
+</article>
+
+
+<!-- PARTIE 1 -->
+
+<article class="news-card">
+
+<div class="video-cover">
+
+<a href="https://www.facebook.com/reel/1485269767993760"
+target="_blank" rel="noopener noreferrer">
+
+<span class="play-button">▶</span>
+
+<h3>RO’YA</h3>
+
+<p>PARTIE 01</p>
+
+</a>
+
+</div>
+
+<div class="news-content">
+
+<span class="category">بودكاست | Partie 1</span>
+
+<h3>🎙️ بودكاست رؤيا | RO’YA – الحلقة الأولى – Partie 1</h3>
+
+<p>
+بداية حكاية، وأول رحلة في عالم الأفكار،
+الحوار واكتشاف وجهات نظر مختلفة. ✨
+</p>
+
+<p>
+<strong>مع:</strong><br>
+Najet Chaabani<br>
+Malek Belaid
+</p>
+
+<p>🎬 إخراج: Yassine Methni</p>
+
+<p>بدعم من دار الشباب المروج.</p>
+
+<a class="read-more"
+href="https://www.facebook.com/reel/1485269767993760"
+target="_blank" rel="noopener noreferrer">
+▶ مشاهدة الفيديو على Facebook
+</a>
+
+</div>
+
+</article>
+
+</div>
 
 </main>
 
@@ -362,11 +408,11 @@
 
 <footer class="footer">
 
-  <strong>DUEVISION PRODUCTION</strong>
+<strong>DUEVISION PRODUCTION</strong>
 
-  <p>DUE MENTI, UNA VISIONE.</p>
+<p>DUE MENTI, UNA VISIONE.</p>
 
-  <p>© 2026 DUEVISION PRODUCTION</p>
+<p>© 2026 DUEVISION PRODUCTION</p>
 
 </footer>
 
