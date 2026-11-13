@@ -1,143 +1,82 @@
 
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>الفيديوهات - DUEVISION PRODUCTION</title>
-
+<title>الفيديوهات - DUEVISION</title>
 <link rel="stylesheet" href="style.css">
-
 </head>
-
 <body>
 
-<!-- HEADER -->
-
 <header class="topbar">
-
-  <a class="brand" href="index.html">
-    <span class="brand-mark">DV</span>
-
-    <span class="brand-copy">
-      <strong>DUEVISION</strong>
-      <small>PRODUCTION</small>
-    </span>
-  </a>
-
-  <nav class="nav" id="mainNav">
-    <a href="index.html">الرئيسية</a>
-    <a href="bio.html">السيرة الذاتية</a>
-    <a href="news.html">آخر الأخبار</a>
-    <a href="videos.html">فيديوهات</a>
-    <a href="contact.html">اتصل بنا</a>
-  </nav>
-
-  <button class="menu-toggle" id="menuToggle">☰</button>
-
+<a class="brand" href="index.html">
+<span class="brand-mark">DV</span>
+<span class="brand-copy"><strong>DUEVISION</strong><small>PRODUCTION</small></span>
+</a>
+<nav class="nav" id="mainNav">
+<a href="index.html">الرئيسية</a>
+<a href="bio.html">السيرة الذاتية</a>
+<a href="news.html">آخر الأخبار</a>
+<a href="videos.html">فيديوهات</a>
+<a href="contact.html">اتصل بنا</a>
+</nav>
+<button class="menu-toggle" id="menuToggle">☰</button>
 </header>
 
-
-<!-- VIDEOS -->
-
 <main class="container">
+<h2 class="section-title">فيديوهات وتقارير</h2>
 
-  <h2 class="section-title">فيديوهات وتقارير</h2>
+<div class="news-grid">
 
-  <div class="news-grid">
+  <article class="news-card">
 
-    <article class="news-card">
+    <video controls preload="metadata">
+      <source src="r2_s1_kemla.mp4" type="video/mp4">
+      متصفحك لا يدعم تشغيل الفيديو.
+    </video>
 
-      <!-- FACEBOOK VIDEO -->
+    <div class="news-content">
 
-      <div id="fb-root"></div>
+      <span class="category">فيديوهات</span>
 
-      <div class="facebook-video-container">
+      <h3>🎙️ بودكاست رؤيا | RO'YA –الحلقة الأولى</h3>
 
-        <div class="fb-video"
-          data-href="https://www.facebook.com/reel/1485269767993760/"
-          data-width="800"
-          data-allowfullscreen="true"
-          data-show-text="false">
-        </div>
+      <p>
+        نفتحوا معاكم نافذة جديدة للنقاش، الأفكار
+        وتبادل وجهات النظر. ✨
+      </p>
 
-      </div>
+      <p>
+        **مع:**<br>
+        Najet Chaabani<br>
+        Malek Belaid
+      </p>
 
-      <!-- VIDEO CONTENT -->
+      <p>🎬 إخراج: Yassine Methni</p>
 
-      <div class="news-content">
+      <p>بدعم من دار الشباب المروج.</p>
 
-        <span class="category">بودكاست | فيديوهات</span>
+      <p>تابعونا وشاركونا آراءكم ❤️</p>
 
-        <h3>🎙️ بودكاست رؤيا | RO'YA</h3>
+    </div>
+  </article>
 
-        <h4>الحلقة الأولى – PART 1</h4>
-
-        <p>
-          نفتح معاكم نافذة جديدة للنقاش، الأفكار
-          وتبادل وجهات النظر، في رحلة لاكتشاف
-          رؤى مختلفة ومواضيع تلامس الإنسان والمجتمع. ✨
-        </p>
-
-        <p><strong>ضيوف الحلقة:</strong></p>
-
-        <p>
-          Najet Chaabani<br>
-          Malek Belaid
-        </p>
-
-        <p>
-          <strong>🎬 إخراج:</strong> Yassine Methni
-        </p>
-
-        <p>
-          <strong>بدعم من:</strong> دار الشباب المروج
-        </p>
-
-        <p>تابعونا وشاركونا آراءكم ❤️</p>
-
-      </div>
-
-    </article>
-
-  </div>
+</div>
 
 </main>
 
-
-<!-- FOOTER -->
-
 <footer class="footer">
-
-  <strong>DUEVISION PRODUCTION</strong>
-
-  <p>DUE MENTI, UNA VISIONE.</p>
-
-  <p>© 2026 DUEVISION PRODUCTION</p>
-
+<strong>DUEVISION PRODUCTION</strong>
+<p>DUE MENTI, UNA VISIONE.</p>
+<p>© 2026 DUEVISION PRODUCTION</p>
 </footer>
 
-
-<!-- FACEBOOK SDK -->
-
-<script async defer crossorigin="anonymous"
-src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v23.0">
-</script>
-
-
-<!-- MENU -->
-
 <script>
-
 document.getElementById('menuToggle').addEventListener('click', () => {
-
-  document.getElementById('mainNav').classList.toggle('open');
-
+document.getElementById('mainNav').classList.toggle('open');
 });
-
 </script>
-
 </body>
 </html>
+
