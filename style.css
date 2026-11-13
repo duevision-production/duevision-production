@@ -856,6 +856,58 @@ body {
 
 }
 
+
+/* FEEDBACK HOME SECTION */
+
+.feedback-home {
+  padding: 80px 20px;
+  text-align: center;
+  background: #111;
+  border-top: 1px solid rgba(214,173,85,.2);
+}
+
+.feedback-home-content {
+  max-width: 750px;
+  margin: auto;
+}
+
+.feedback-home h2 {
+  color: #d6ad55;
+  font-size: 32px;
+  margin: 15px 0;
+}
+
+.feedback-home p {
+  color: #ccc;
+  line-height: 2;
+  margin: 20px 0;
+}
+
+.feedback-button {
+  display: inline-block;
+  padding: 13px 30px;
+  background: #d6ad55;
+  color: #111;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: .3s;
+}
+
+.feedback-button:hover {
+  background: #f0d18a;
+  transform: translateY(-3px);
+}
+
+.footer a {
+  color: #d6ad55;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: white;
+}
+
 /* =====================================
    END - DUEVISION PRODUCTION
 ===================================== */
