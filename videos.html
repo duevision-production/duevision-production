@@ -1,107 +1,143 @@
 
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>الفيديوهات - DUEVISION</title>
+
+<title>الفيديوهات - DUEVISION PRODUCTION</title>
+
 <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
 
+<!-- HEADER -->
+
 <header class="topbar">
-<a class="brand" href="index.html">
-<span class="brand-mark">DV</span>
-<span class="brand-copy"><strong>DUEVISION</strong><small>PRODUCTION</small></span>
-</a>
-<nav class="nav" id="mainNav">
-<a href="index.html">الرئيسية</a>
-<a href="bio.html">السيرة الذاتية</a>
-<a href="news.html">آخر الأخبار</a>
-<a href="videos.html">فيديوهات</a>
-<a href="contact.html">اتصل بنا</a>
-</nav>
-<button class="menu-toggle" id="menuToggle">☰</button>
+
+  <a class="brand" href="index.html">
+    <span class="brand-mark">DV</span>
+
+    <span class="brand-copy">
+      <strong>DUEVISION</strong>
+      <small>PRODUCTION</small>
+    </span>
+  </a>
+
+  <nav class="nav" id="mainNav">
+    <a href="index.html">الرئيسية</a>
+    <a href="bio.html">السيرة الذاتية</a>
+    <a href="news.html">آخر الأخبار</a>
+    <a href="videos.html">فيديوهات</a>
+    <a href="contact.html">اتصل بنا</a>
+  </nav>
+
+  <button class="menu-toggle" id="menuToggle">☰</button>
+
 </header>
 
+
+<!-- VIDEOS -->
+
 <main class="container">
-<h2 class="section-title">فيديوهات وتقارير</h2>
 
-<div class="news-grid">
+  <h2 class="section-title">فيديوهات وتقارير</h2>
 
-  
+  <div class="news-grid">
 
-<article class="news-card">
+    <article class="news-card">
 
-  
+      <!-- FACEBOOK VIDEO -->
 
-<div id="fb-root"></div>
+      <div id="fb-root"></div>
 
+      <div class="facebook-video-container">
 
-<div id="fb-root"></div>
+        <div class="fb-video"
+          data-href="https://www.facebook.com/reel/1485269767993760/"
+          data-width="800"
+          data-allowfullscreen="true"
+          data-show-text="false">
+        </div>
 
-<script async defer crossorigin="anonymous"
-src="https://www.facebook.com/reel/1485269767993760"
-</script>
+      </div>
 
-<div class="fb-video"
-data-href="https://www.facebook.com/reel/1485269767993760/"
-data-width="800"
-data-allowfullscreen="true"
-data-show-text="false">
-</div>
+      <!-- VIDEO CONTENT -->
 
+      <div class="news-content">
 
-</div>
+        <span class="category">بودكاست | فيديوهات</span>
 
+        <h3>🎙️ بودكاست رؤيا | RO'YA</h3>
 
-  <div class="news-content">
+        <h4>الحلقة الأولى – PART 1</h4>
 
-    <span class="category">بودكاست | فيديوهات</span>
+        <p>
+          نفتح معاكم نافذة جديدة للنقاش، الأفكار
+          وتبادل وجهات النظر، في رحلة لاكتشاف
+          رؤى مختلفة ومواضيع تلامس الإنسان والمجتمع. ✨
+        </p>
 
-    <h3>🎙️ بودكاست رؤيا | RO'YA</h3>
+        <p><strong>ضيوف الحلقة:</strong></p>
 
-    <h4>الحلقة الأولى – PART 1</h4>
+        <p>
+          Najet Chaabani<br>
+          Malek Belaid
+        </p>
 
-    <p>
-      نفتح معاكم نافذة جديدة للنقاش، الأفكار
-      وتبادل وجهات النظر، في رحلة لاكتشاف
-      رؤى مختلفة ومواضيع تلامس الإنسان والمجتمع. ✨
-    </p>
+        <p>
+          <strong>🎬 إخراج:</strong> Yassine Methni
+        </p>
 
-    <p><strong>ضيوف الحلقة:</strong></p>
+        <p>
+          <strong>بدعم من:</strong> دار الشباب المروج
+        </p>
 
-    <p>
-      Najet Chaabani<br>
-      Malek Belaid
-    </p>
+        <p>تابعونا وشاركونا آراءكم ❤️</p>
 
-    <p><strong>🎬 إخراج:</strong> Yassine Methni</p>
+      </div>
 
-    <p><strong>بدعم من:</strong> دار الشباب المروج</p>
-
-    <p>تابعونا وشاركونا آراءكم ❤️</p>
+    </article>
 
   </div>
 
-</article>
-
-
-</div>
-
 </main>
 
+
+<!-- FOOTER -->
+
 <footer class="footer">
-<strong>DUEVISION PRODUCTION</strong>
-<p>DUE MENTI, UNA VISIONE.</p>
-<p>© 2026 DUEVISION PRODUCTION</p>
+
+  <strong>DUEVISION PRODUCTION</strong>
+
+  <p>DUE MENTI, UNA VISIONE.</p>
+
+  <p>© 2026 DUEVISION PRODUCTION</p>
+
 </footer>
 
-<script>
-document.getElementById('menuToggle').addEventListener('click', () => {
-document.getElementById('mainNav').classList.toggle('open');
-});
+
+<!-- FACEBOOK SDK -->
+
+<script async defer crossorigin="anonymous"
+src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v23.0">
 </script>
+
+
+<!-- MENU -->
+
+<script>
+
+document.getElementById('menuToggle').addEventListener('click', () => {
+
+  document.getElementById('mainNav').classList.toggle('open');
+
+});
+
+</script>
+
 </body>
 </html>
-
