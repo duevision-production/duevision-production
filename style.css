@@ -820,3 +820,21 @@ body {
         height: 1100px;
     }
 }
+/* FACEBOOK VIDEO - 16:9 */
+
+.video-wrapper {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  position: relative;
+  overflow: hidden;
+  background: #000;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
